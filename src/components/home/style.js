@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "gatsby";
 
 export const StyledLink = styled(Link)`
@@ -12,17 +12,80 @@ export const StyledLink = styled(Link)`
     }
 `;
 
+const fadeIn = keyframes`
+    from { 
+        opacity:0;
+        margin-left:5vw;
+    }
+
+    to {
+        opacity: 1;
+        margin-left:0px;
+    }
+`;
+
+const fadeInFromLeft = keyframes`
+    from { 
+        opacity:0;
+        margin-left:-5vw;
+    }
+
+    to {
+        opacity: 1;
+        margin-left:0px;
+    }
+`;
+
 export const StyledHome = styled.div`
     .showcase {
-        background: #e3ebf7;
-        height: 275px;
+        background: #001426;
+        height: 100vh;
         display: grid;
         justify-items: center;
         align-items: center;
 
-        h2 {
-            color: #595757;
-            font-size: 35px;
+        .header {
+            color: #ffffff;
+            font-size: 28px;
+            width: 260px;
+
+            span {
+                color: #6c6c6c;
+                margin-right: 2rem;
+            }
+
+            .sentence {
+                font-family: "Inconsolata";
+                font-weight: normal;
+                width: 260px;
+                animation: 0.6s ease-out 0s 1 ${fadeIn};
+                cursor: pointer;
+            }
+
+            .logos {
+                display: flex;
+                justify-content: center;
+                margin-top: 1rem;
+                animation: 0.6s ease-out 0s 1 ${fadeInFromLeft};
+
+                svg {
+                    justify-self: center;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    margin: 0.5rem;
+                    cursor: pointer;
+
+                    path {
+                        fill: #ffffff;
+                    }
+
+                    :hover {
+                        path {
+                            fill: turquoise;
+                        }
+                    }
+                }
+            }
         }
 
         .items {
