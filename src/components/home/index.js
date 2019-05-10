@@ -8,10 +8,6 @@ const Home = ({ children }) => {
         <StyledHome>
             <section className="showcase">
                 <div className="header">
-                    <div className="logos">
-                        <Github />
-                        <Linkedin />
-                    </div>
                     <div className="sentences">
                         <div className="sentence">
                             <span>1</span> elis jones;
@@ -24,8 +20,12 @@ const Home = ({ children }) => {
                         </div>
                     </div>
                     <div className="links">
-                        <StyledLink to="./projects">./projects</StyledLink>
-                        <StyledLink to="./about_me">./about_me</StyledLink>
+                        <StyledLink to="./projects">projects</StyledLink>
+                        <StyledLink to="./about_me">about_me</StyledLink>
+                    </div>
+                    <div className="logos">
+                        <Github />
+                        <Linkedin />
                     </div>
                 </div>
             </section>
