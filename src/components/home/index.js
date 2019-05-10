@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledHome } from "./style";
+import { StyledHome, StyledLink } from "./style";
 import Github from "../../images/svg/github.svg";
 import Linkedin from "../../images/svg/linkedin.svg";
 
@@ -8,27 +8,27 @@ const Home = ({ children }) => {
         <StyledHome>
             <section className="showcase">
                 <div className="header">
-                    <div className="sentence">
-                        <span>1</span> test sentence;
-                    </div>
-                    <div className="sentence">
-                        <span>2</span> test sentence;
-                    </div>
-                    <div className="sentence">
-                        <span>3</span> test sentence;
-                    </div>
                     <div className="logos">
                         <Github />
                         <Linkedin />
                     </div>
+                    <div className="sentences">
+                        <div className="sentence">
+                            <span>1</span> elis jones;
+                        </div>
+                        <div className="sentence">
+                            <span>2</span> web developer;
+                        </div>
+                        <div className="sentence">
+                            <span>3</span> made in wales;
+                        </div>
+                    </div>
+                    <div className="links">
+                        <StyledLink to="./projects">./projects</StyledLink>
+                        <StyledLink to="./about_me">./about_me</StyledLink>
+                    </div>
                 </div>
             </section>
-            {/* <section className="projects">
-                <h2 className="title">projects/</h2>
-                {children.map(Post => (
-                    <div className="project">{Post}</div>
-                ))}
-            </section> */}
         </StyledHome>
     );
 };
