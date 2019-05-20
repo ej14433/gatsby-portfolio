@@ -10,6 +10,8 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-remark`,
         `gatsby-plugin-styled-components`,
+        `gatsby-plugin-sitemap`,
+        `gatsby-plugin-robots-txt`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
